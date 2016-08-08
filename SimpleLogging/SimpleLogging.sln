@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLogging", "SimpleLogging\SimpleLogging.csproj", "{3950EFDC-FA50-4FF5-A0FC-8CE764240974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLogging.UnitTests", "SimpleLogging.UnitTests\SimpleLogging.UnitTests.csproj", "{CD08D55C-80C8-467D-8115-28221377FA5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3950EFDC-FA50-4FF5-A0FC-8CE764240974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3950EFDC-FA50-4FF5-A0FC-8CE764240974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3950EFDC-FA50-4FF5-A0FC-8CE764240974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3950EFDC-FA50-4FF5-A0FC-8CE764240974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD08D55C-80C8-467D-8115-28221377FA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD08D55C-80C8-467D-8115-28221377FA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD08D55C-80C8-467D-8115-28221377FA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD08D55C-80C8-467D-8115-28221377FA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
