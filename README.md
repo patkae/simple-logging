@@ -1,1 +1,1 @@
-# simple-logging
+# Simple Logging
