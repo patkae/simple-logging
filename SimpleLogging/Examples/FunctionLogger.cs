@@ -6,7 +6,10 @@ using SimpleLogging.Logging;
 
 namespace SimpleLogging.Examples
 {
-	public class FunctionLogger : Logger
+	/// <summary>
+	/// Logger using a function to write the entry
+	/// </summary>
+	public class FunctionLogger : LoggerBase
 	{
 		private Action<LogEntry> _logAction;
 

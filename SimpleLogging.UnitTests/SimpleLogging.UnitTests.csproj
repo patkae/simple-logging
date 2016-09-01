@@ -53,9 +53,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="FunctionLoggerTests.cs" />
-    <Compile Include="LogFunction.cs" />
+    <Compile Include="FunctionLogger\FunctionLoggerTests.cs" />
+    <Compile Include="FunctionLogger\LogFunction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderModel\ProviderBasedLogger.cs" />
+    <Compile Include="ProviderModel\ProviderModelLoggerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleLogging\SimpleLogging.csproj">
@@ -63,6 +65,7 @@
       <Name>SimpleLogging</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

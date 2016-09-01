@@ -39,12 +39,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Examples\FunctionLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\LogEntry.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggerBase.cs" />
     <Compile Include="Logging\LogSeverity.cs" />
+    <Compile Include="Logging\Providers\TraceLogProvider.cs" />
+    <Compile Include="Logging\Providers\ILogProvider.cs" />
+    <Compile Include="Logging\TextFormatters\ITextFormatter.cs" />
+    <Compile Include="Logging\TextFormatters\TextFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TextFormatters\ITextFormatter.cs" />
-    <Compile Include="TextFormatters\TextFormatter.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

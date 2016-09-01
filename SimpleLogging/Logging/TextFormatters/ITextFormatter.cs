@@ -1,7 +1,6 @@
 ﻿using System;
-using SimpleLogging.Logging;
 
-namespace PwC.Logging
+namespace SimpleLogging.Logging.TextFormatters
 {
 	public interface ITextFormatter
 	{

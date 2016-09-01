@@ -1,19 +1,20 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PwC.Logging.Formatters;
 using SimpleLogging.Examples;
 using SimpleLogging.Logging;
 
-namespace SimpleLogging.UnitTests
+namespace SimpleLogging.UnitTests.ProviderModel
 {
 	[TestClass]
-	public class FunctionLoggerTests
+	public class ProviderModelLoggerTests
 	{
 		[TestMethod]
 		public void LogTest()
 		{
-			var func = new LogFunction();
-			var logger = new FunctionLogger(func.WriteLog);
+			var provider = new TestLogProvider();
+			Logger.SetProvider(provider);
+
+			var logger = Logger.Current;
 
 			var expected = new LogEntry()
 			{
@@ -23,27 +24,27 @@ namespace SimpleLogging.UnitTests
 			expected.Severity = LogSeverity.Critical;
 			expected.Message = "Critical Message";
 			logger.LogCritical(expected.Message);
-			AssertEntry(expected, func.Entry, "LogCritical");
+			AssertEntry(expected, provider.Entry, "LogCritical");
 
 			expected.Severity = LogSeverity.Error;
 			expected.Message = "Error Message";
 			logger.LogError(expected.Message);
-			AssertEntry(expected, func.Entry, "LogError");
+			AssertEntry(expected, provider.Entry, "LogError");
 
 			expected.Severity = LogSeverity.Warning;
 			expected.Message = "Warning Message";
 			logger.LogWarning(expected.Message);
-			AssertEntry(expected, func.Entry, "LogWarning");
+			AssertEntry(expected, provider.Entry, "LogWarning");
 
 			expected.Severity = LogSeverity.Informational;
 			expected.Message = "Info Message";
 			logger.LogInfo(expected.Message);
-			AssertEntry(expected, func.Entry, "LogInfo");
+			AssertEntry(expected, provider.Entry, "LogInfo");
 
 			expected.Severity = LogSeverity.Verbose;
 			expected.Message = "Verbose Message";
 			logger.LogVerbose(expected.Message);
-			AssertEntry(expected, func.Entry, "LogVerbose");
+			AssertEntry(expected, provider.Entry, "LogVerbose");
 		}
 
 		private void AssertEntry(LogEntry expected, LogEntry actual, string message)

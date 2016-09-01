@@ -45,9 +45,16 @@ namespace SimpleLogging.Logging
 		/// Defaults to <c>null</c>.
 		/// </summary>
 		public Exception Exception { get; set; }
-
+		
+		/// <summary>
+		/// Gets or sets the component or class to which the log entry pertains.
+		/// </summary>
 		public string Source { get; set; }
 
+		/// <summary>
+		/// Gets or sets the category for the log entry.
+		/// </summary>
+		/// <remarks>Example categories can be General, Security, User Management, etc.</remarks>
 		public string Category { get; set; }
 
 		public Guid CorrelationId { get; set; }
